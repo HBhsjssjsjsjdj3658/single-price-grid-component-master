@@ -1,0 +1,125 @@
+*:root{
+    --cyan:hsl(179, 62%, 43%);
+    --brightYellow:hsl(71, 73%, 54%);
+
+    --lightGrey:hsl(204, 43%, 93%);
+    --grayBlue: hsl(218, 22%, 67%);
+    --primaryPading: 1.5em;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.card{
+    width: 530px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.089);
+}
+.card .card_header{
+    background-color: white;
+    padding: 1.8em var(--primaryPading);
+    font-size: 0.9rem;
+}
+.card_header h2{
+    color: var(--cyan);
+    margin-bottom: 15px;
+}
+.card_header .day30{
+    color: var(--brightYellow);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card_header .main_para{
+    color: var(--grayBlue);
+    font-size: 0.81rem;
+    max-width: 60ch;
+    line-height: 23px;
+}
+/* Card footer */
+.card .card_footer{
+    display: flex;
+}
+.card_footer .supscription{
+    flex-basis: 50%;
+    background-color: var(--cyan);
+    color: white;
+    padding: 1.8em var(--primaryPading);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.supscription h3{
+    font-size: 0.85rem;
+    margin-bottom: 13px;
+}
+.supscription .dollar{
+    font-size: 1.32rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.supscription span{
+    color: var(--lightGrey);
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: normal;
+    margin-left: 10px;
+    transform: translateY(-50%);
+}
+.supscription .access{
+    font-size: 0.65rem;
+    margin-bottom: 15px;
+    color: var(--lightGrey);
+}
+.supscription button{
+    display: block;
+    width: 100%;
+    background-color: var(--brightYellow);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    color: white;
+    margin-bottom: 0;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.187);
+}
+.card_footer .why{
+    flex-basis: 50%;
+    background-color: hsla(179, 60%, 47%, 0.957);
+    color: white;
+    padding: 1.8em var(--primaryPading);
+}
+.why .why_para{
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    color: hsla(203, 44%, 93%, 0.788);
+    margin-top: 13px;
+    line-height: 16px;
+}
+.why h3{
+    font-size: 0.74rem;
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+@media screen and (max-width:430px){
+    .card{
+        width: 290px;
+    }
+    .card_header h3{
+        max-width: 50ch;
+    }
+    .card_footer{
+        flex-direction: column;
+    }
+}
